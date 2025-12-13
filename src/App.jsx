@@ -10,7 +10,7 @@ import Wealth from './pages/services/Wealth';
 import Travel from './pages/services/Travel';
 import './App.css'
 import Footer from './components/footer';
-import WillAndTrust from './pages/services/WillandTrust';
+import WillAndTrust from './pages/services/WillAndTrust';
 import RetirementPlanning from './pages/services/Retirement_Planning';
 import LifeInsurance from './pages/services/Life_Insurance';
 import Long_Term_Care from './pages/services/Long_Term_Care';
