@@ -13,8 +13,6 @@ function Footer(){
                     <li><Link to="/services/life-insurance" className="text-white uppercase text-[16px] tracking-wider font-semibold font-cabin hover:text-gray-300 transition-colors">Life Insurance</Link></li>
                     <li><Link to="/services/long-term-care" className="text-white uppercase text-[16px] tracking-wider font-semibold font-cabin hover:text-gray-300 transition-colors">Long Term Care</Link></li>
                     <li><Link to="/services/final-expenses" className="text-white uppercase text-[16px] tracking-wider font-semibold font-cabin hover:text-gray-300 transition-colors">Final Expenses</Link></li>
-                    <li><Link to="/services/real-estate" className="text-white uppercase text-[16px] tracking-wider font-semibold font-cabin hover:text-gray-300 transition-colors">Real Estate</Link></li>
-                    <li><Link to="/services/investments" className="text-white uppercase text-[16px] tracking-wider font-semibold font-cabin hover:text-gray-300 transition-colors">Investments</Link></li>
                     <li><Link to="/services/college-savings" className="text-white uppercase text-[16px] tracking-wider font-semibold font-cabin hover:text-gray-300 transition-colors">College Savings</Link></li>
                     <li><Link to="/services/tax-savings" className="text-white uppercase text-[16px] tracking-wider font-semibold font-cabin hover:text-gray-300 transition-colors">Tax Savings</Link></li>
                     <li><Link to="/services/health-insurance" className="text-white uppercase text-[16px] tracking-wider font-semibold font-cabin hover:text-gray-300 transition-colors">Health Insurance</Link></li>

@@ -207,19 +207,6 @@ function Why_Us() {
             </div>
 
             <div className="bg-black p-6 rounded-lg">
-              <ChartBarIcon className="w-12 h-12 text-[#bab675] mb-4" />
-              <h3 className="text-xl font-bold text-white font-lato mb-3">Investment Management</h3>
-              <p className="text-gray-300 font-cabin mb-4">
-                Professional portfolio management aligned with your risk tolerance and time horizon.
-              </p>
-              <ul className="list-disc list-inside space-y-1 text-gray-400 text-sm font-cabin">
-                <li>Diversified portfolios</li>
-                <li>Regular rebalancing</li>
-                <li>Performance monitoring</li>
-              </ul>
-            </div>
-
-            <div className="bg-black p-6 rounded-lg">
               <DocumentTextIcon className="w-12 h-12 text-[#bab675] mb-4" />
               <h3 className="text-xl font-bold text-white font-lato mb-3">Retirement Readiness</h3>
               <p className="text-gray-300 font-cabin mb-4">
