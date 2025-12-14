@@ -13,23 +13,23 @@ import {
   ArrowPathIcon,
   UserGroupIcon,
 } from '@heroicons/react/24/outline';
-import { StarIcon as StarIconSolid } from '@heroicons/react/24/solid';
+// import { StarIcon as StarIconSolid } from '@heroicons/react/24/solid'; // Commented out - testimonials section hidden
 
 function Home() {
   // Refs for scroll animations
   const valueGridRef = useRef(null);
-  const socialProofRef = useRef(null);
+  // const socialProofRef = useRef(null); // Commented out - testimonials section hidden
   const processRef = useRef(null);
-  const whyRef = useRef(null);
-  const teamRef = useRef(null);
+  // const whyRef = useRef(null); // Commented out - section removed
+  // const teamRef = useRef(null);
   const finalCtaRef = useRef(null);
 
   // Use useInView hooks
   const valueGridInView = useInView(valueGridRef, { once: true, amount: 0.2 });
-  const socialProofInView = useInView(socialProofRef, { once: true, amount: 0.2 });
+  // const socialProofInView = useInView(socialProofRef, { once: true, amount: 0.2 }); // Commented out - testimonials section hidden
   const processInView = useInView(processRef, { once: true, amount: 0.2 });
-  const whyInView = useInView(whyRef, { once: true, amount: 0.2 });
-  const teamInView = useInView(teamRef, { once: true, amount: 0.2 });
+  // const whyInView = useInView(whyRef, { once: true, amount: 0.2 }); // Commented out - section removed
+  // const teamInView = useInView(teamRef, { once: true, amount: 0.2 });
   const finalCtaInView = useInView(finalCtaRef, { once: true, amount: 0.2 });
 
   // Animation variants
@@ -49,24 +49,24 @@ function Home() {
   };
 
 
-  // Testimonials data
-  const testimonials = [
-    {
-      name: "Sarah L.",
-      text: "InfyGrow helped my family reduce taxes and plan for college — I finally feel in control.",
-      rating: 5
-    },
-    {
-      name: "John M.",
-      text: "The team made retirement planning simple and clear. Highly recommend!",
-      rating: 5
-    },
-    {
-      name: "Maria R.",
-      text: "Transparent advice and personalized service. Best financial decision we made.",
-      rating: 5
-    }
-  ];
+  // Testimonials data - Commented out until real testimonials are available
+  // const testimonials = [
+  //   {
+  //     name: "Sarah L.",
+  //     text: "InfyGrow helped my family reduce taxes and plan for college — I finally feel in control.",
+  //     rating: 5
+  //   },
+  //   {
+  //     name: "John M.",
+  //     text: "The team made retirement planning simple and clear. Highly recommend!",
+  //     rating: 5
+  //   },
+  //   {
+  //     name: "Maria R.",
+  //     text: "Transparent advice and personalized service. Best financial decision we made.",
+  //     rating: 5
+  //   }
+  // ];
 
   // Process steps
   const processSteps = [
@@ -110,7 +110,7 @@ function Home() {
       description: "Comprehensive coverage of retirement, tax, insurance & investments"
     },
     {
-      title: "Trusted, Local Arizona Team",
+      title: "Trusted, Local & Professional Team",
       icon: UserGroupIcon,
       description: "Experienced advisors who understand your local needs"
     }
@@ -139,6 +139,8 @@ function Home() {
     <>
       {/* HERO SECTION */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-black via-neutral-900 to-black">
+        {/* Ensure black at bottom for seamless transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" />
         {/* Animated gradient background */}
         <motion.div
           className="absolute inset-0 opacity-30"
@@ -226,7 +228,7 @@ function Home() {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircleIcon className="w-5 h-5 text-[#bab675]" />
-                  <span className="font-cabin">No Pressure</span>
+                  <span className="font-cabin">No Obligation</span>
                 </div>
               </motion.div>
             </motion.div>
@@ -248,11 +250,14 @@ function Home() {
             </motion.div>
           </div>
         </div>
+        {/* Ensure solid black at bottom for seamless continuation */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-black pointer-events-none" />
       </section>
 
       {/* VALUE GRID SECTION */}
-      <section ref={valueGridRef} className="py-20 px-4 bg-black">
-        <div className="container mx-auto max-w-6xl">
+      <section ref={valueGridRef} className="py-20 px-4 bg-black relative">
+        {/* Smooth transition from Hero - removed, black continues seamlessly */}
+        <div className="container mx-auto max-w-6xl relative z-10">
           <motion.h2
             initial="hidden"
             animate={valueGridInView ? "visible" : "hidden"}
@@ -286,11 +291,13 @@ function Home() {
             ))}
           </motion.div>
         </div>
+        {/* Smooth transition to Process */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black via-black/50 via-black/20 to-black pointer-events-none" />
       </section>
 
-      {/* SOCIAL PROOF SECTION */}
+      {/* SOCIAL PROOF SECTION - Commented out until real testimonials are available */}
+      {/* 
       <section ref={socialProofRef} className="py-24 px-4 bg-neutral-900 relative">
-        {/* Smooth transition */}
         <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-black to-neutral-900 pointer-events-none" />
         <div className="container mx-auto max-w-6xl relative z-10">
           <motion.h2
@@ -315,19 +322,16 @@ function Home() {
                 whileHover={{ y: -5 }}
                 className="bg-black p-6 rounded-lg border border-neutral-800"
               >
-                {/* Stars */}
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <StarIconSolid key={i} className="w-5 h-5 text-[#bab675]" />
                   ))}
                 </div>
                 
-                {/* Testimonial Text */}
                 <p className="text-gray-300 font-cabin mb-6 italic">
                   "{testimonial.text}"
                 </p>
                 
-                {/* Client Info */}
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#bab675]/30 to-[#bab675]/10 border-2 border-[#bab675]/30 flex items-center justify-center">
                     <span className="text-white font-bold font-montserrat">
@@ -345,7 +349,6 @@ function Home() {
             ))}
           </motion.div>
 
-          {/* As Featured In */}
           <motion.div
             initial="hidden"
             animate={socialProofInView ? "visible" : "hidden"}
@@ -354,7 +357,6 @@ function Home() {
           >
             <p className="text-gray-400 font-cabin mb-4">As featured in</p>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-50">
-              {/* Placeholder logos - can be replaced with actual logos */}
               <div className="h-12 w-32 bg-neutral-800 rounded flex items-center justify-center">
                 <span className="text-gray-500 text-xs font-cabin">Logo 1</span>
               </div>
@@ -368,10 +370,13 @@ function Home() {
           </motion.div>
         </div>
       </section>
+      */}
 
       {/* PROCESS SECTION */}
-      <section ref={processRef} className="py-20 px-4 bg-black">
-        <div className="container mx-auto max-w-6xl">
+      <section ref={processRef} className="py-20 px-4 bg-black relative">
+        {/* Smooth transition from Value Grid */}
+        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-black via-black/20 via-black/50 to-black pointer-events-none" />
+        <div className="container mx-auto max-w-6xl relative z-10">
           <motion.h2
             initial="hidden"
             animate={processInView ? "visible" : "hidden"}
@@ -465,92 +470,14 @@ function Home() {
             </motion.div>
           </div>
         </div>
+        {/* Smooth fade to Final CTA - seamless transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black via-black/60 via-black/30 via-black/10 to-transparent pointer-events-none" />
       </section>
-
-      {/* WHY INFYGROW SECTION */}
-      <section ref={whyRef} className="py-24 px-4 bg-neutral-900 relative">
-        {/* Smooth transition */}
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-black to-neutral-900 pointer-events-none" />
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <motion.h2
-            initial="hidden"
-            animate={whyInView ? "visible" : "hidden"}
-            variants={fadeInUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white font-montserrat mb-12"
-          >
-            Why Clients Choose <span className="text-[#bab675]">InfyGrow</span>
-          </motion.h2>
-
-          <motion.div
-            initial="hidden"
-            animate={whyInView ? "visible" : "hidden"}
-            variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
-          >
-            <motion.div
-              variants={fadeInUp}
-              whileHover={{ scale: 1.02, x: 5 }}
-              className="bg-black p-6 rounded-lg border-l-4 border-[#bab675]"
-            >
-              <CheckCircleIcon className="w-10 h-10 text-[#bab675] mb-4" />
-              <h3 className="text-2xl font-bold text-white font-lato mb-3">
-                Personalized Financial Plans
-              </h3>
-              <p className="text-gray-300 font-cabin">
-                Custom strategies designed specifically for your family's unique situation and goals.
-              </p>
-            </motion.div>
-
-            <motion.div
-              variants={fadeInUp}
-              whileHover={{ scale: 1.02, x: 5 }}
-              className="bg-black p-6 rounded-lg border-l-4 border-[#bab675]"
-            >
-              <ShieldCheckIcon className="w-10 h-10 text-[#bab675] mb-4" />
-              <h3 className="text-2xl font-bold text-white font-lato mb-3">
-                Transparent, No-Pressure Guidance
-              </h3>
-              <p className="text-gray-300 font-cabin">
-                Honest advice with clear communication. No hidden fees or pushy sales tactics.
-              </p>
-            </motion.div>
-
-            <motion.div
-              variants={fadeInUp}
-              whileHover={{ scale: 1.02, x: 5 }}
-              className="bg-black p-6 rounded-lg border-l-4 border-[#bab675]"
-            >
-              <ChartBarIcon className="w-10 h-10 text-[#bab675] mb-4" />
-              <h3 className="text-2xl font-bold text-white font-lato mb-3">
-                Holistic Approach
-              </h3>
-              <p className="text-gray-300 font-cabin">
-                Comprehensive coverage of Retirement, Tax, Insurance & Investments all in one place.
-              </p>
-            </motion.div>
-
-            <motion.div
-              variants={fadeInUp}
-              whileHover={{ scale: 1.02, x: 5 }}
-              className="bg-black p-6 rounded-lg border-l-4 border-[#bab675]"
-            >
-              <UserGroupIcon className="w-10 h-10 text-[#bab675] mb-4" />
-              <h3 className="text-2xl font-bold text-white font-lato mb-3">
-                Trusted, Local Team
-              </h3>
-              <p className="text-gray-300 font-cabin">
-                Experienced advisors who understand your local needs and are here for the long term.
-              </p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
 
       {/* FINAL CTA SECTION */}
       <section ref={finalCtaRef} className="py-24 px-4 bg-gradient-to-br from-black via-neutral-900 to-black relative overflow-hidden">
-        {/* Smooth transition from Why InfyGrow section */}
-        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-neutral-900 via-neutral-900/60 via-neutral-900/30 to-transparent pointer-events-none" />
+        {/* Smooth fade from Process - seamless transition */}
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-black via-black/10 via-black/30 via-black/60 to-transparent pointer-events-none" />
         {/* Background gradient effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#bab675]/10 via-transparent to-[#bab675]/10" />
 
@@ -597,6 +524,8 @@ function Home() {
             </motion.p>
           </motion.div>
         </div>
+        {/* Smooth transition to Footer */}
+        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-black via-black/90 via-black/75 via-black/60 via-black/45 via-black/30 via-black/15 via-black/5 to-transparent pointer-events-none" />
       </section>
     </>
   );
