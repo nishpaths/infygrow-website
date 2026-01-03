@@ -213,15 +213,6 @@ function Navbar() {
                         >
                           Health
                         </Link>
-                      </li>
-                      <li className="hover:text-gray-500 active:text-gray-400 transition-colors">
-                        <Link 
-                          to="/services/travel" 
-                          onClick={closeMobileMenu}
-                          className="inline-flex font-lato items-center w-full p-3 min-h-[44px]"
-                        >
-                          Travel
-                        </Link>
                       </li>                                     
                   </ul>
                 </div>

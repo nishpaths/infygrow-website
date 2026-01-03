@@ -10,26 +10,6 @@ function Team() {
     bio: 'With extensive experience in financial planning, Giridhar specializes in helping families build secure wealth through personalized strategies. He is committed to providing transparent, honest advice that helps clients achieve their long-term financial goals.',
   };
 
-  const partners = [
-    {
-      name: 'Radhika Pippiri',
-      title: 'Partner & Licensed Financial Advisor | Your Wealth Planning Expert',
-      credentials: 'Licensed Financial Advisor',
-      bio: 'Radhika brings deep expertise in comprehensive financial planning, focusing on retirement strategies and wealth preservation. She is dedicated to helping families navigate complex financial decisions with clarity and confidence.',
-    },
-    {
-      name: 'Bhavani Battu',
-      title: 'Partner & Licensed Financial Advisor | Your Wealth Planning Expert',
-      credentials: 'Licensed Financial Advisor',
-      bio: 'Bhavani specializes in tax-efficient planning and investment strategies tailored to individual needs. She is passionate about empowering clients to make informed financial decisions that align with their life goals.',
-    },
-    {
-      name: 'Deepthi Jalla',
-      title: 'Partner & Licensed Financial Advisor | Your Wealth Planning Expert',
-      credentials: 'Licensed Financial Advisor',
-      bio: 'Deepthi focuses on holistic financial planning, combining insurance, investments, and estate planning. She is committed to building lasting relationships with clients and helping them achieve financial security.',
-    },
-  ];
 
   const otherTeamMembers = [
     {
@@ -107,18 +87,6 @@ function Team() {
           {/* Founder - Featured at Top */}
           <div className="mb-16">
             <TeamCard member={founder} size="large" />
-          </div>
-
-          {/* Partners - Row Below Founder */}
-          <div className="mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-white font-montserrat mb-8 text-center">
-              Our <span className="text-[#bab675]">Partners</span>
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {partners.map((partner, index) => (
-                <TeamCard key={index} member={partner} size="standard" />
-              ))}
-            </div>
           </div>
 
           {/* Other Team Members */}

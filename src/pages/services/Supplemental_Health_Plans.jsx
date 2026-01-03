@@ -1,20 +1,22 @@
 import React from 'react';
 import ServiceDetail from '../../components/ServiceDetail';
 
-function Health_Insurance() {
+function Supplemental_Health_Plans() {
     const serviceData = {
-        title: "Health Insurance",
-        header: "What is Health Insurance",
-        description: " ACA Individual & Family Health insurance protects your well-being and finances by covering medical expenses. Market place plans help you access the care you need without financial strain.",
+        title: "Supplemental Health Plans",
+        header: "What are Supplemental Health Plans",
+        description: "Supplemental health insurance plans provide additional coverage beyond your primary health insurance. These plans help cover out-of-pocket expenses, deductibles, and costs that your main insurance may not fully cover, offering extra financial protection for unexpected medical situations.",
         benefits: [
-            "Market Place  Medical Plans",
-            "Market Place Dental Plans",
+            "Critical Illness Coverage",
+            "Accident Insurance",
+            "Hospital Indemnity Plans",
+            "Gap Coverage for Deductibles",
         ]
     };
 
     const handleQuoteClick = (e) => {
         e.preventDefault();
-        const url = "https://www.healthsherpa.com/?_agent_id=giridhar-patha";
+        const url = "https://shop.uhone.com/en/quote/census?brokerid=AA5613626";
         const width = 1200;
         const height = 800;
         const left = (window.screen.width - width) / 2;
@@ -22,7 +24,7 @@ function Health_Insurance() {
         
         window.open(
             url,
-            'HealthInsuranceQuote',
+            'SupplementalHealthPlansQuote',
             `width=${width},height=${height},left=${left},top=${top},toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes`
         );
     };
@@ -43,5 +45,5 @@ function Health_Insurance() {
     );
 }
 
-export default Health_Insurance;
+export default Supplemental_Health_Plans;
 

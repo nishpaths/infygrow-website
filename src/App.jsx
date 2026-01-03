@@ -7,7 +7,6 @@ import Navbar from './components/navbar';
 import Why_Us from './pages/Why_Us';
 import Health from './pages/services/Health';
 import Wealth from './pages/services/Wealth';
-import Travel from './pages/services/Travel';
 import './App.css'
 import Footer from './components/footer';
 import WillAndTrust from './pages/services/WillAndTrust';
@@ -22,6 +21,7 @@ import Tax_Savings from './pages/services/Tax_Savings';
 import Buisness_Opportunity from './pages/services/Buisness_Opportunity';
 import Health_Insurance from './pages/services/Health_Insurance';
 import Visitors_Insurance from './pages/services/Visitors_Insurance';
+import Supplemental_Health_Plans from './pages/services/Supplemental_Health_Plans';
 function App() {
 
   return (
@@ -33,7 +33,6 @@ function App() {
           <Route path = "/why-us" element = {<Why_Us/>} />
           <Route path="/services/wealth" element={<Wealth />} />
           <Route path="/services/health" element={<Health />} />
-          <Route path="/services/travel" element={<Travel />} />
           <Route path="/contact" element={<Contact />} />
           {/* <Route path="/tools" element={<Tools />} /> */}
           <Route path="/team" element={<Team />} />
@@ -49,6 +48,7 @@ function App() {
           <Route path="/services/business-opportunity" element={<Buisness_Opportunity />} />
           <Route path="/services/health-insurance" element={<Health_Insurance />} />
           <Route path="/services/visitors-insurance" element={<Visitors_Insurance />} />
+          <Route path="/services/supplemental-health-plans" element={<Supplemental_Health_Plans />} />
         </Routes>
       </main>
       <Footer/>
