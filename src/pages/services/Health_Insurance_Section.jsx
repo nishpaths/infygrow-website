@@ -1,6 +1,7 @@
 import React from 'react';
 import ServiceCard from '../../components/serviceCard';
-function Health(){
+
+function Health_Insurance_Section(){
     return(
         <> 
         <h1 className="text-xl font-semibold font-cabin text-center mt-20 text-[#bab675]">Health Insurance</h1>
@@ -12,4 +13,5 @@ function Health(){
         </>
     );
 }
-export default Health;
+export default Health_Insurance_Section;
+

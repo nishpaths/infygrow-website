@@ -9,7 +9,7 @@ function Buisness_Opportunity() {
         benefits: [
             "Startup Guidance",
             "Financial knowledge",
-            "IField building",
+            "Field building",
         ]
     };
 

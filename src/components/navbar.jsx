@@ -193,25 +193,52 @@ function Navbar() {
                   id="dropdownNavbar"
                   className={`${
                     servicesOpen ? "block" : "hidden"
-                  } md:absolute md:left-0 md:mt-2 bg-black border border-gray-700 rounded-lg shadow-lg w-full md:w-44 z-[60] transition-all duration-200`}
+                  } md:absolute md:left-0 md:mt-2 bg-black border border-gray-700 rounded-lg shadow-lg w-full md:w-auto md:min-w-[400px] z-[60] transition-all duration-200`}
                 >
-                  <ul className="p-2 text-sm text-white font-medium" aria-labelledby="dropdownNvbarButton">
-                      <li className="hover:text-gray-500 active:text-gray-400 transition-colors">
+                  <ul className="p-3 md:p-4 text-sm text-white font-medium md:grid md:grid-cols-2 md:gap-x-4 md:gap-y-1" aria-labelledby="dropdownNvbarButton">
+                      <li className="hover:bg-neutral-800 active:bg-neutral-700 transition-colors rounded">
                         <Link 
-                          to="/services/wealth" 
+                          to="/services/life-insurance-section" 
                           onClick={closeMobileMenu}
-                          className="inline-flex font-lato items-center w-full p-3 min-h-[44px]"
+                          className="inline-flex font-lato items-center w-full p-3 min-h-[44px] rounded"
                         >
-                          Wealth
+                          Life Insurance
                         </Link>
                       </li>
-                      <li className="hover:text-gray-500 active:text-gray-400 transition-colors">
+                      <li className="hover:bg-neutral-800 active:bg-neutral-700 transition-colors rounded">
                         <Link 
-                          to="/services/health" 
+                          to="/services/health-insurance-section" 
                           onClick={closeMobileMenu}
-                          className="inline-flex font-lato items-center w-full p-3 min-h-[44px]"
+                          className="inline-flex font-lato items-center w-full p-3 min-h-[44px] rounded"
                         >
-                          Health
+                          Health Insurance
+                        </Link>
+                      </li>
+                      <li className="hover:bg-neutral-800 active:bg-neutral-700 transition-colors rounded">
+                        <Link 
+                          to="/services/retirement-planning-section" 
+                          onClick={closeMobileMenu}
+                          className="inline-flex font-lato items-center w-full p-3 min-h-[44px] rounded"
+                        >
+                          Retirement Planning
+                        </Link>
+                      </li>
+                      <li className="hover:bg-neutral-800 active:bg-neutral-700 transition-colors rounded">
+                        <Link 
+                          to="/services/legacy-planning-section" 
+                          onClick={closeMobileMenu}
+                          className="inline-flex font-lato items-center w-full p-3 min-h-[44px] rounded"
+                        >
+                          Legacy Planning
+                        </Link>
+                      </li>
+                      <li className="hover:bg-neutral-800 active:bg-neutral-700 transition-colors rounded md:col-span-2">
+                        <Link 
+                          to="/services/business-opportunity-section" 
+                          onClick={closeMobileMenu}
+                          className="inline-flex font-lato items-center w-full p-3 min-h-[44px] rounded"
+                        >
+                          Business Opportunity
                         </Link>
                       </li>                                     
                   </ul>
